@@ -3,27 +3,107 @@
 <html>
     <head>
         <title>Chris Rosales' Portfolio</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Chris Daniel V. Rosales</h1>
-        <div>
-            <h2>Personal Information</h2>
-            <p>Birthday: January 21, 2006</p>
-        </div>
-        <div>
-            <h2>Academic Background</h2>
-            <div>
-                <h3>University of the Philippines - Los Baños</h3>
-                <p>BS Computer Science</p>
-                <p>Batch 2024</p>
+        <!-- https://www.w3schools.com/Css/css_navbar.asp-->
+        <div id="navbar">
+            <div id="navbar-left">
+                <img id="profile" src="profile.jpg" alt="Profile Photo">
+                <a href="#home">chris rosales</a>
             </div>
-            <div>
-                <h3>Santa Rosa Science and Technology High School</h3>
-                <p>Academic Track - STEM Strand</p>
-                <p>2018-2024</p>
+            <div class="flex-container" id="navbar-right">
+                <a href="#home" class="flex-item">home</a>
+                <a href="#skills" class="flex-item">skills</a>
+                <a href="#projects" class="flex-item">projects</a>
+                <a href="#contacts" class="flex-item">contacts</a>
             </div>
         </div>
         
-        
+        <div id="home" class="flex-container">
+            <img src="profile.jpg" alt="Profile Photo">
+            <div id="home-text">
+                <p>Hello World!</p>
+                <h1>I'm Chris Rosales</h1>
+                <p>a bs computer science student from university of the philippines - los baños</p>
+            </div>
+        </div>
+
+        <div id="skills">
+            <h2>skills</h2>
+            <div>
+                <h3>Python programming</h3>
+                <ul>
+                    <li>procedural programming</li>
+                    <li>external libraries</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Java programming</h3>
+                <ul>
+                    <li>object-oriented programming</li>
+                    <li>graphical user interface</li>
+                </ul>
+            </div>
+            <div>
+                <h3>R programming</h3>
+                <ul>
+                    <li>numerical analysis</li>
+                    <li>data science</li>
+                </ul>
+            </div>
+            <div>
+                <h3>C programming</h3>
+                <ul>
+                    <li>data structures</li>
+                    <li>dynamic memory allocation</li>
+                </ul>
+            </div>
+            <div>
+                <h3>HTML and CSS</h3>
+                <ul>
+                    <li>basic webpage creation</li>
+                    <li>frontend design and development</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Visual Basic programming</h3>
+                <ul>
+                    <li>simple Windows app development</li>
+                    <li>basic control flow statements</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects">
+            <h2>projects</h2>
+            <div>
+                <div>
+                    <h3>Simple Python Game</h3>
+                    <img src="" alt="Simple Python Game Preview">
+                    <p>a project in cmsc 12 created using Python programming language applying basic programming concepts</p>
+                </div>
+                <div>
+                    <h3>Expenditure Optimizer</h3>
+                    <img src="" alt="Expenditure Optimizer Preview">
+                    <p>a project in cmsc 150 created using R programming language applying numerical analysis methods</p>
+                </div>
+                <div>
+                    <h3>Shopping Platform</h3>
+                    <img src="" alt="Shopping Platform Preview">
+                    <p>a group project in cmsc 22 created using Java programming language applying OOP concepts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" id="contacts">
+            <h2>contacts</h2>
+            <div>
+                <a href="">Email: cvrosales@up.edu.ph</a>
+                <a href="">Facebook: fb.com/cvrosales</a>
+                <a href="">LinkedIn: </a>
+            </div>
+        </div>
     </body>
 </html>
