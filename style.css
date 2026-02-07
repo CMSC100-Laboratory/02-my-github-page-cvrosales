@@ -1,24 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
+
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: JetBrains Mono, Courier, monospace;
     margin: 0;
     padding: 0;
 }
 
 body {
-    margin: 8px;
-    background-color: #2D3C59;
+    background-color: #000000;
     min-height: 1080px;
+}
+
+p, h1, h2, h3, a, li {
+    color: #E3CCAE;
 }
 
 img {
     object-fit: cover;
 }
 
+/* TOP NAVIGATION BAR */
+
 #navbar {
-    border-radius: 100px;
     display: flex;
     justify-content: space-between;
-    background-color: #94A378;
+    /* https://cssgradient.io/ */
+    background: linear-gradient(180deg, rgba(38, 42, 86, 1) 0%, rgba(38, 42, 86,0.7) 100%);
+    padding: 8px;
     position: sticky;
     top: 0;
 }
@@ -26,31 +34,43 @@ img {
 #navbar img {
     height: 48px;
     width: 48px;
-    margin: 8px;
     border-radius: 50%;
+    margin: 0 8px 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 #navbar div {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-#navbar-right {
     flex: 1;
 }
 
-#navbar-right a {
-    width: 100%;
-    text-align: center;
+#navbar div:last-child {
+    justify-content: flex-end;
 }
 
+#navbar a {
+    /* font-weight: bold; */
+    text-decoration: none;
+    text-align: left;
+    padding: 8px;
+}
+
+#navbar a:hover {
+    background-color: #B8621B;
+}
+
+/* HOME */
+
 #home {
-    margin: 8px 0;
-    background-color: #94A378;
-    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 8px 0;
     height: calc(100vw / 16 * 9);
-    max-height: calc(100vh - 88px);
+    max-height: calc(100vh - 64px);
+    scroll-margin-top: 64px; 
+    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/ */
 }
 
 #home img {
@@ -65,12 +85,62 @@ img {
     padding: 16px;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/* https://codepen.io/frankeno/pen/QWmmxQb */
+.cursor{
+    color: #B8621B;
+    border-right: 2px solid rgba(184, 98, 27,.75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typewriter 5s steps(50) 1s 1 normal both, 
+        blinkingCursor 500ms steps(50) infinite normal;
 }
 
-.flex-item {
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkingCursor{
+    from { border-right-color: rgba(184, 98, 27,.75); }
+    to { border-right-color: transparent; }
+}
+
+/* SKILLS */
+
+#skills, #projects {
+    display: flex;
+    flex-direction: row;
+}
+
+#skills h2, #projects h2 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg)
+}
+
+#skills h2, #projects h2 {
+    
+    padding: 8px;
+}
+
+#skills > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
     flex: 1;
+}
+
+#skills > div div {
+    background-color: #262A56;
+    padding: 8px;
+    margin: 8px;
+    flex: 1;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
