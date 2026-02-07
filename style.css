@@ -258,6 +258,7 @@ ul {
     flex-wrap: wrap;
     margin-left: -16px;
     margin-top: -16px;
+    justify-content: center;
 }
 
 #contacts h2 {
@@ -265,7 +266,6 @@ ul {
     margin-left: 16px;
     background-color: #262A56;
     font-size: 36px;
-    /* flex: 0; */
 }
 
 #contacts a {
@@ -275,7 +275,7 @@ ul {
     margin-left: 16px;
     text-decoration: none;
     white-space: nowrap;
-    /* flex: 1; */
+    flex: 1;
     flex-grow: 1;
 }
 
