@@ -178,7 +178,7 @@ img {
     display: flex;
     flex-direction: row;
     scroll-margin: 80px;
-    /* min-height: 15vw; */
+    min-height: 15vw;
 }
 
 #skills h2 {
@@ -195,7 +195,6 @@ img {
     flex-wrap: wrap;
     margin-top: -16px;
     flex: 1;
-    /* align-items: stretch; */
 }
 
 #skills > div div {
@@ -219,4 +218,35 @@ ul {
     padding: 0;
     margin: 0;
     margin-left: 16px;
+}
+
+/* ===== autobiography ====== */
+
+#autobiography {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 16px 0;
+    scroll-margin: 80px;
+}
+
+#autobiography h2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #B8621B;
+    font-size: 36px;
+    flex: 0;
+}
+
+#autobiography div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-right: 16px;
+    background: radial-gradient(circle,rgba(38, 42, 86, 1) 20%, rgba(0, 0, 0, 1)70%, rgba(184, 98, 27,0.2) 100%);
+    justify-content: center;
+}
+
+#autobiography p {
+    margin: 16px;
 }
