@@ -279,6 +279,10 @@ ul {
     flex-grow: 1;
 }
 
+#contacts a:hover {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 30%, rgb(253, 137, 41) 50%, rgba(184,98,27,1) 70%,  black 100%) ;
+}
+
 #contacts a:last-child {
     background: #262A56;
     flex-grow: 0;
