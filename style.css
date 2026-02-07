@@ -16,11 +16,6 @@ p, h2, h3, a, li {
     color: #E3CCAE;
 }
 
-li {
-    /* font-family: f; */
-    font-size: 12px;
-}
-
 img {
     object-fit: cover;
 }
@@ -96,7 +91,7 @@ img {
 #home h1{
     color: #B8621B;
     font-size: 5vw;
-    border-right: 2px solid rgba(184, 98, 27,.75);
+    border-right: 2px solid #B8621B;
     white-space: nowrap;
     overflow: hidden;
     animation: 
@@ -110,7 +105,7 @@ img {
 }
 
 @keyframes blinkingCursor{
-    from { border-right-color: rgba(184, 98, 27,.75); }
+    from { border-right-color: #B8621B; }
     to { border-right-color: transparent; }
 }
 
@@ -124,17 +119,17 @@ img {
     justify-content: left;
 }
 
-#projects > h2 {
+#projects h2 {
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    background-color: rgb(184, 98, 27);
+    background-color: #B8621B;
     font-size: 36px;
     flex: 0;
 }
 
 #projects > div div {
-    background: linear-gradient(black 0%, rgba(184,98,27,1) 20%, rgba(184,98,27,1) 80%,  black 100%);
-    margin: 0 16px 0 0;
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 40%, rgba(184,98,27,1) 60%,  black 100%);
+    margin: 16px 16px 0 0;
     padding: 16px;
     flex: 1;
     display: flex;
@@ -144,6 +139,7 @@ img {
 
 #projects > div {
     display: flex;
+    margin-top: -16px;
 }
 
 /* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
@@ -161,15 +157,14 @@ img {
     }
 }
 
-
-
 #projects img {
     width: 100%;
-    margin: 16px 0;
+    margin: 0 0 16px 0 ;
 }
 
-#projects h3 {
+#projects h3, #skills h3 {
     font-size: 24px;
+    padding-bottom: 16px;
 }
 
 /* ===== SKILLS ===== */
@@ -177,34 +172,34 @@ img {
 #skills {
     display: flex;
     flex-direction: row;
-    scroll-margin: 72px;
-    padding: 8px 16px;
+    scroll-margin: 80px;
+    min-height: 15vw;
 }
 
 #skills h2 {
-    /* writing-mode: vertical-rl; */
-    /* text-orientation: mixed; */
-    /* transform: rotate(0deg); */
-    font-size: 24px;
-    position: sticky;
-    top: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #262A56;
+    font-size: 36px;
+    flex: 0;
 }
 
 #skills > div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    margin-top: -16px;
+    flex: 1;
+    /* align-items: stretch; */
 }
 
 #skills > div div {
-    background-color: #262A56;
-    padding: 16px;;
+    background-color: rgb(38, 42, 86);
+    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 20%, rgba(38,42,86,1) 80%,  black 100%);
+    padding: 16px;
+    margin-left: 16px;
+    margin-top: 16px;
     flex: 1;
-}
-
-#skills h3 {
-    padding-bottom: 16px;
 }
 
 ul {
