@@ -71,7 +71,7 @@ img {
     max-height: calc(100vh - 64px);
     scroll-margin-top: 64px;
     background: radial-gradient(circle,rgba(38, 42, 86, 1) 20%, rgba(0, 0, 0, 1)70%, rgba(184, 98, 27,0.2) 100%);
-    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/ */    
+    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/     */
 }
 
 #home img {
@@ -135,6 +135,11 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+}
+
+#projects > div div:hover {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 20%, rgba(184,98,27,1) 80%,  black 100%);
 }
 
 #projects > div {
@@ -173,7 +178,7 @@ img {
     display: flex;
     flex-direction: row;
     scroll-margin: 80px;
-    min-height: 15vw;
+    /* min-height: 15vw; */
 }
 
 #skills h2 {
@@ -194,12 +199,15 @@ img {
 }
 
 #skills > div div {
-    background-color: rgb(38, 42, 86);
-    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 20%, rgba(38,42,86,1) 80%,  black 100%);
+    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 40%, rgba(38,42,86,1) 60%,  black 100%);
     padding: 16px;
     margin-left: 16px;
     margin-top: 16px;
     flex: 1;
+}
+
+#skills > div div:hover {
+    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 25%, rgb(81, 90, 183) 50%, rgba(38,42,86,1) 75%,  black 100%);
 }
 
 ul {
