@@ -243,10 +243,48 @@ ul {
     flex-direction: column;
     padding: 16px;
     margin-right: 16px;
-    background: radial-gradient(circle,rgba(38, 42, 86, 1) 20%, rgba(0, 0, 0, 1)70%, rgba(184, 98, 27,0.2) 100%);
+    background: radial-gradient(circle,rgba(184, 98, 27,0.3) 20%, #000000 70%, rgba(38, 42, 86, 1) 100%);
     justify-content: center;
 }
 
 #autobiography p {
     margin: 16px;
+}
+
+/* ===== footer ====== */
+
+#contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+
+#contacts h2 {
+    margin-top: 16px;
+    margin-left: 16px;
+    background-color: #262A56;
+    font-size: 36px;
+    /* flex: 0; */
+}
+
+#contacts a {
+    padding: 16px;
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 40%, rgba(184,98,27,1) 60%,  black 100%) ;
+    margin-top: 16px;
+    margin-left: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    /* flex: 1; */
+    flex-grow: 1;
+}
+
+#contacts a:last-child {
+    background: #262A56;
+    flex-grow: 0;
+}
+
+#contacts a:last-child:hover {
+    background: #B8621B;
+    flex-grow: 0;
 }
