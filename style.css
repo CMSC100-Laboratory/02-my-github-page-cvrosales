@@ -199,7 +199,7 @@ img {
 }
 
 #skills > div div {
-    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 40%, rgba(38,42,86,1) 60%,  black 100%);
+    background: linear-gradient(0deg, black 0%, rgba(38,42,86,1) 40%, rgba(38,42,86,1) 60%,  black 100%);
     padding: 16px;
     margin-left: 16px;
     margin-top: 16px;
@@ -207,11 +207,16 @@ img {
 }
 
 #skills > div div:hover {
-    background: linear-gradient(45deg, black 0%, rgba(38,42,86,1) 25%, rgb(81, 90, 183) 50%, rgba(38,42,86,1) 75%,  black 100%);
+    background: linear-gradient(0deg, black 0%, rgba(38,42,86,1) 25%, rgb(81, 90, 183) 50%, rgba(38,42,86,1) 75%,  black 100%);
+}
+
+li {
+    margin-bottom: 8px;
 }
 
 ul {
-    list-style-type: none;
+    /* list-style-type: none; */
     padding: 0;
     margin: 0;
+    margin-left: 16px;
 }
