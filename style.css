@@ -57,7 +57,6 @@ img {
 }
 
 #navbar a {
-    /* font-weight: bold; */
     text-decoration: none;
     text-align: left;
     padding: 8px;
@@ -115,16 +114,10 @@ img {
     to { border-right-color: transparent; }
 }
 
-
-#home p {
-    font-size: 16px;
-}
-
 /* ====== PROJECTS ===== */
 
 #projects {
-    margin: 16px 0;    
-    /* padding: 16px 0; */
+    margin: 16px 0;
     scroll-margin: 80px;
     display: flex;
     flex-direction: row-reverse;
@@ -135,19 +128,40 @@ img {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     background-color: rgb(184, 98, 27);
-    font-size: 5vw;
+    font-size: 36px;
     flex: 0;
 }
 
-#projects div {
+#projects > div div {
     background: linear-gradient(black 0%, rgba(184,98,27,1) 20%, rgba(184,98,27,1) 80%,  black 100%);
-    margin-right: 8px;
-    padding: 16px 8px;
+    margin: 0 16px 0 0;
+    padding: 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+#projects > div {
+    display: flex;
+}
+
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media (max-width: 600px) {
+    #projects > div {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 601px) {
+    #projects > div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+
 
 #projects img {
     width: 100%;
@@ -156,7 +170,6 @@ img {
 
 #projects h3 {
     font-size: 24px;
-    /* height: 48px; */
 }
 
 /* ===== SKILLS ===== */
