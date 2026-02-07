@@ -8,11 +8,17 @@
 
 body {
     background-color: #000000;
-    min-height: 1080px;
+    /* min-height: 1080px;
+    min-width: 480px; */
 }
 
-p, h1, h2, h3, a, li {
+p, h2, h3, a, li {
     color: #E3CCAE;
+}
+
+li {
+    /* font-family: f; */
+    font-size: 12px;
 }
 
 img {
@@ -69,8 +75,9 @@ img {
     margin: 0 0 8px 0;
     height: calc(100vw / 16 * 9);
     max-height: calc(100vh - 64px);
-    scroll-margin-top: 64px; 
-    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/ */
+    scroll-margin-top: 64px;
+    background: radial-gradient(circle,rgba(38, 42, 86, 1) 20%, rgba(0, 0, 0, 1)70%, rgba(184, 98, 27,0.2) 100%);
+    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/ */    
 }
 
 #home img {
@@ -82,12 +89,14 @@ img {
     flex-direction: column;
     justify-content: center;
     width: 60%;
+    max-width: calc(60% - 32px);
     padding: 16px;
 }
 
 /* https://codepen.io/frankeno/pen/QWmmxQb */
-.cursor{
+#home h1{
     color: #B8621B;
+    font-size: 5vw;
     border-right: 2px solid rgba(184, 98, 27,.75);
     white-space: nowrap;
     overflow: hidden;
@@ -106,37 +115,83 @@ img {
     to { border-right-color: transparent; }
 }
 
-/* SKILLS */
 
-#skills, #projects {
+#home p {
+    font-size: 16px;
+}
+
+/* ====== PROJECTS ===== */
+
+#projects {
+    margin: 16px 0;    
+    /* padding: 16px 0; */
+    scroll-margin: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+#projects > h2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: rgb(184, 98, 27);
+    font-size: 5vw;
+    flex: 0;
+}
+
+#projects div {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 20%, rgba(184,98,27,1) 80%,  black 100%);
+    margin-right: 8px;
+    padding: 16px 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#projects img {
+    width: 100%;
+    margin: 16px 0;
+}
+
+#projects h3 {
+    font-size: 24px;
+    /* height: 48px; */
+}
+
+/* ===== SKILLS ===== */
+
+#skills {
     display: flex;
     flex-direction: row;
+    scroll-margin: 72px;
+    padding: 8px 16px;
 }
 
-#skills h2, #projects h2 {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    transform: rotate(180deg)
-}
-
-#skills h2, #projects h2 {
-    
-    padding: 8px;
+#skills h2 {
+    /* writing-mode: vertical-rl; */
+    /* text-orientation: mixed; */
+    /* transform: rotate(0deg); */
+    font-size: 24px;
+    position: sticky;
+    top: 0;
 }
 
 #skills > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
-    flex: 1;
 }
 
 #skills > div div {
     background-color: #262A56;
-    padding: 8px;
-    margin: 8px;
+    padding: 16px;;
     flex: 1;
+}
+
+#skills h3 {
+    padding-bottom: 16px;
 }
 
 ul {
