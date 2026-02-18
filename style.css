@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
+
+* {
+    font-family: JetBrains Mono, Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    /* min-height: 1080px;
+    min-width: 480px; */
+}
+
+p, h2, h3, a, li {
+    color: #E3CCAE;
+}
+
+img {
+    object-fit: cover;
+}
+
+/* TOP NAVIGATION BAR */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    /* https://cssgradient.io/ */
+    background: linear-gradient(180deg, rgba(38, 42, 86, 1) 0%, rgba(38, 42, 86,0.7) 100%);
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}
+
+#navbar img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin: 0 8px 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#navbar div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#navbar div:last-child {
+    justify-content: flex-end;
+}
+
+#navbar a {
+    text-decoration: none;
+    text-align: left;
+    padding: 8px;
+}
+
+#navbar a:hover {
+    background-color: #B8621B;
+}
+
+/* HOME */
+
+#home {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 8px 0;
+    height: calc(100vw / 16 * 9);
+    max-height: calc(100vh - 64px);
+    scroll-margin-top: 64px;
+    background: radial-gradient(circle,rgba(38, 42, 86, 1) 20%, rgba(0, 0, 0, 1)70%, rgba(184, 98, 27,0.2) 100%);
+    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/     */
+}
+
+#home img {
+    width: 40%;
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    max-width: calc(60% - 32px);
+    padding: 16px;
+}
+
+/* https://codepen.io/frankeno/pen/QWmmxQb */
+#home h1{
+    color: #B8621B;
+    font-size: 5vw;
+    border-right: 2px solid #B8621B;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typewriter 5s steps(50) 1s 1 normal both, 
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkingCursor{
+    from { border-right-color: #B8621B; }
+    to { border-right-color: transparent; }
+}
+
+/* ====== PROJECTS ===== */
+
+#projects {
+    margin: 16px 0;
+    scroll-margin: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+#projects h2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #B8621B;
+    font-size: 36px;
+    flex: 0;
+}
+
+#projects > div div {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 40%, rgba(184,98,27,1) 60%,  black 100%);
+    margin: 16px 16px 0 0;
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#projects > div div:hover {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 20%, rgba(184,98,27,1) 80%,  black 100%);
+}
+
+#projects > div {
+    display: flex;
+    margin-top: -16px;
+}
+
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media (max-width: 600px) {
+    #projects > div {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 601px) {
+    #projects > div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+#projects img {
+    width: 100%;
+    margin: 0 0 16px 0 ;
+}
+
+#projects h3, #skills h3 {
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+/* ===== SKILLS ===== */
+
+#skills {
+    display: flex;
+    flex-direction: row;
+    scroll-margin: 80px;
+    min-height: 15vw;
+}
+
+#skills h2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #262A56;
+    font-size: 36px;
+    flex: 0;
+}
+
+#skills > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -16px;
+    flex: 1;
+}
+
+#skills > div div {
+    background: linear-gradient(0deg, black 0%, rgba(38,42,86,1) 40%, rgba(38,42,86,1) 60%,  black 100%);
+    padding: 16px;
+    margin-left: 16px;
+    margin-top: 16px;
+    flex: 1;
+}
+
+#skills > div div:hover {
+    background: linear-gradient(0deg, black 0%, rgba(38,42,86,1) 25%, rgb(81, 90, 183) 50%, rgba(38,42,86,1) 75%,  black 100%);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+ul {
+    /* list-style-type: none; */
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+}
+
+/* ===== autobiography ====== */
+
+#autobiography {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 16px 0;
+    scroll-margin: 80px;
+}
+
+#autobiography h2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #B8621B;
+    font-size: 36px;
+    flex: 0;
+}
+
+#autobiography div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-right: 16px;
+    background: radial-gradient(circle,rgba(184, 98, 27,0.3) 20%, #000000 70%, rgba(38, 42, 86, 1) 100%);
+    justify-content: center;
+}
+
+#autobiography p {
+    margin: 16px;
+}
+
+/* ===== footer ====== */
+
+#contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-top: -16px;
+    justify-content: center;
+}
+
+#contacts h2 {
+    margin-top: 16px;
+    margin-left: 16px;
+    background-color: #262A56;
+    font-size: 36px;
+}
+
+#contacts a {
+    padding: 16px;
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 40%, rgba(184,98,27,1) 60%,  black 100%) ;
+    margin-top: 16px;
+    margin-left: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex: 1;
+    flex-grow: 1;
+}
+
+#contacts a:hover {
+    background: linear-gradient(black 0%, rgba(184,98,27,1) 30%, rgb(253, 137, 41) 50%, rgba(184,98,27,1) 70%,  black 100%) ;
+}
+
+#contacts a:last-child {
+    background: #262A56;
+    flex-grow: 0;
+}
+
+#contacts a:last-child:hover {
+    background: #B8621B;
+    flex-grow: 0;
+}
